@@ -1,9 +1,10 @@
-import Vue from "vue";
+const app = document.querySelector('#app')
 
-import App from "./App.vue";
+app.innerHTML = `
+<div class="container">
+  <div>Name: remote</div>
+  <div>Framework: none</div>
+  <div>Language: JavaScript</div>
+  <div>CSS: Empty CSS</div>
+</div>`
 
-new Vue({
-  el: "#app",
-  template: "<App/>",
-  components: { App },
-});

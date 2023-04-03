@@ -1,8 +1,13 @@
 <script>
-import Footer from "remote/Footer";
+import add from "remote/add";
 
 export default {
-    components: { Footer }
+    methods: {
+      handlerClick() {
+        console.log('click')
+        console.log(add(2, 3))
+      }
+    }
 }
 </script>
 
@@ -12,6 +17,6 @@ export default {
         <div>Framework: vue2</div>
         <div>Language: JavaScript</div>
         <div>CSS: Empty CSS</div>
-        <Footer />
+        <button @click="handlerClick">Click me!</button>
     </div>
 </template>

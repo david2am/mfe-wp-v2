@@ -15,10 +15,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.vue$/,
-                loader: "vue-loader",
-            },
-            {
                 test: /\.(ts|tsx|js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
@@ -27,13 +23,6 @@ module.exports = {
             }
         ],
     },
-
-    resolve: {
-        extensions: [".tsx", ".ts", ".vue", ".jsx", ".js", ".json"],
-        alias: {
-        vue: "vue/dist/vue.js",
-        },
-    },
     
     plugins: [
         new ModuleFederationPlugin({
@@ -41,16 +30,8 @@ module.exports = {
             filename: "remoteEntry.js",
             remotes: {},
             exposes: {
-                "./Footer": "./src/Footer.vue",
-            },
-            shared: {
-                ...deps,
-                vue: {
-                    singleton: true,
-                    eager: true,
-                    version: deps.vue,
-                },
-            },
+                "./add": "./src/add.js",
+            }
         }),
         new HtmlWebPackPlugin({
             template: "./src/index.html",
