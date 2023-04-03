@@ -11,18 +11,6 @@ module.exports = {
         port: 8081,
         historyApiFallback: true,
     },
-
-    module: {
-        rules: [
-            {
-                test: /\.(ts|tsx|js|jsx)$/,
-                exclude: /node_modules/,
-                use: {
-                loader: "babel-loader",
-                },
-            }
-        ],
-    },
     
     plugins: [
         new ModuleFederationPlugin({
