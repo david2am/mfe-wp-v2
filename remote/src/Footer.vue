@@ -10,17 +10,6 @@
         </nav>
       </header>
     </div>
-  </template>
-  
-  <style scoped>
-  header {
-    color: white;
-  }
-  ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    background-color: greenyellow;
-  }
-  </style>
+</template>
+
   
