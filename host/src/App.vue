@@ -4,7 +4,6 @@ import add from "remote/add";
 export default {
     methods: {
       handlerClick() {
-        console.log('click')
         console.log(add(2, 3))
       }
     }
